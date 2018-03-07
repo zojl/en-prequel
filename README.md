@@ -16,8 +16,8 @@
     <script type="text/javascript">
     $.getScript('https://reqloud.com/work/en-prequel/js/en-prequel.js').done(function(){
         $('#prequel').prequel({
-            imageUrl: 'ССЫЛКА_НА_КАРТИНКУ'});
-        });
+            imageUrl: 'ССЫЛКА_НА_КАРТИНКУ'
+    })});
     </script>
 Обязательно укажите ссылку на картинку!
 
