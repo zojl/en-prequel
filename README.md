@@ -10,7 +10,7 @@
         imgUrl:'http://d1.endata.cx/data/games/60776/%D0%BF%D1%80%D0%B8%D0%BA%D0%B2%D0%B5%D0%BB.png'
     });
 
-Самый простой способ использования:
+Самый простой способ использования для тех, кто не понял ничего выше:
 
     <div id="prequel"></div>
     <script type="text/javascript">
