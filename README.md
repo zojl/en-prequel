@@ -14,7 +14,7 @@
 
     <div id="prequel"></div>
     <script type="text/javascript">
-    $.getScript('https://reqloud.com/work/en-prequel/js/en-prequel.js').done(function(){
+    $.getScript('https://reqloud.com/work/en-prequel/js/en-prequel.min.js').done(function(){
         $('#prequel').prequel({
             imageUrl: 'ССЫЛКА_НА_КАРТИНКУ'
     })});
