@@ -1,26 +1,26 @@
 (function($) {
 	$.fn.prequel = function(params){
-		let defaults = {
+		var defaults = {
 			imageUrl: 'http://d1.endata.cx/data/games/60776/приквел.png'
 		}
-		let finParams = $.extend({}, defaults, params);
-		let imageUrl = finParams.imageUrl;
-		let imageUrlPrefix = imageUrl.substr(0, imageUrl.lastIndexOf('/')+1);
-		let imageExt = imageUrl.substr(imageUrl.lastIndexOf('.'));
-		let parent = $('#prequel');
-		let image = $('<img>').attr('src', imageUrl).addClass('prequel-image');
-		let error = $('<span>').addClass('prequel-error').text('');
-		let form = $('<form>');
-		let formAnswer = $('<input>').attr('type', 'text').addClass('prequel-answer');
-		let formSubmit = $('<input>').attr('type', 'submit').attr('value', 'Отправить').addClass('prequel-submit');
+		var finParams = $.extend({}, defaults, params);
+		var imageUrl = finParams.imageUrl;
+		var imageUrlPrefix = imageUrl.substr(0, imageUrl.lastIndexOf('/')+1);
+		var imageExt = imageUrl.substr(imageUrl.lastIndexOf('.'));
+		var parent = $('#prequel');
+		var image = $('<img>').attr('src', imageUrl).addClass('prequel-image');
+		var error = $('<span>').addClass('prequel-error').text('');
+		var form = $('<form>');
+		var formAnswer = $('<input>').attr('type', 'text').addClass('prequel-answer');
+		var formSubmit = $('<input>').attr('type', 'submit').attr('value', 'Отправить').addClass('prequel-submit');
 		form.append(formAnswer).append(formSubmit);
 		parent.append(image).append($('<br>'));
 		parent.append(error).append($('<br>'));
 		parent.append(form);
 		form.submit(function(){
-			let answer = formAnswer.val().toLowerCase().replace(/\s/g, '');;
-			let url = imageUrlPrefix + answer + imageExt;
-			let oldUrl = image.attr('src');
+			var answer = formAnswer.val().toLowerCase().replace(/\s/g, '');;
+			var url = imageUrlPrefix + answer + imageExt;
+			var oldUrl = image.attr('src');
 			image.attr('src', url);
 			error.text('');
 			image.one('error', function(){
